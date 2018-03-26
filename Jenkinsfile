@@ -1,11 +1,11 @@
 pipeline {
-    agent none {
+    agent any
+
     stages {
-      stage('Build'){
+      stage('build'){
         steps {
-              echo 'Building...'
+              sh 'ant -f build.xml -v'
         }
       }
     }
     }
-}
